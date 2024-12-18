@@ -2,7 +2,7 @@
 เกม "(ยังไม่ตั้ง)"
 - 651310109 ชลธชา สังข์นาค :2D Artist/FX 
 https://github.com/CamelliaXD
-- 651310125 ภัทราภรณ์ รักษาจิต :Artist  
+- 651310125 ภัทราภรณ์ รักษาจิต :Artist
 https://github.com/CutEyCopy
 - 651310355 ทิพรัตน์ ประสิทธิพันธุ์ :Game Design / Developer 
 https://github.com/tipsitpra
