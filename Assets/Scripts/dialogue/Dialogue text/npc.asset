@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa833396a3c2c7f40a8b039458780ca4, type: 3}
   m_Name: npc
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - npc 1
+  - npc 1
+  - npc 1
