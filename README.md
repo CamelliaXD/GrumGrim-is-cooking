@@ -7,6 +7,7 @@
 
 - 651310109 ชลธิชา สังข์นาค :2D Artist/FX 
 https://github.com/CamelliaXD
+- ผลงานที่ทำในทีม : https://www.canva.com/design/DAGdyQTGnys/gUeVQFCSPJglubRL447wbg/edit?utm_content=DAGdyQTGnys&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 - 651310125 ภัทราภรณ์ รักษาจิต :Artist
 https://github.com/CutEyCopy
 - 651310355 ทิพรัตน์ ประสิทธิพันธุ์ :Game Design / Developer 
