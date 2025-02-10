@@ -111,6 +111,27 @@ public class Controller : MonoBehaviour //, IPointerDownHandler , IBeginDragHand
         }
     }
 
+    public void OnClickResultSlot(Slot slot)
+    {
+        if (currentMaterial == null)
+        {
+            Debug.Log("clicked");
+            pointer.gameObject.SetActive(true);
+            pointer.sprite = slot.material.GetComponent<Image>().sprite;
+            slot.gameObject.SetActive(false);
+            ClearCraftingSlot();
+        }
+    }
+
+    public void ClearCraftingSlot()
+    {
+        foreach (Slot slot in craftingSlot)
+        {
+            slot.material = null;
+            materiallist[slot.index] = null;
+            slot.gameObject.SetActive(false);
+        }
+    }
 
     //public void OnDrag(PointerEventData eventData)
     //{
