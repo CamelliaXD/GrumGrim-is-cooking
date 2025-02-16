@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 public class Controller : MonoBehaviour //, IPointerDownHandler , IBeginDragHandler , IDragHandler , IEndDragHandler
 {
@@ -10,16 +11,33 @@ public class Controller : MonoBehaviour //, IPointerDownHandler , IBeginDragHand
     private Materials currentMaterial;
     public Image pointer;
 
+    [SerializeField] private GameObject potionPrefab;
+
     public Slot[] craftingSlot;
     public List<Materials> materiallist;
     public string[] recipe;
     public Materials[] recipeResult;
     public Slot resultSlot;
 
+    public Slider brewTimerSlider;
+    public float maxbrewTimer = 0.10f;
+    public float brewTimer;
+    public bool stopTimer = false;
+    public bool startBrewtime = false;
+
+    public TMP_Text brewTimertext;
+
+    //public bool shouldLerp = false;
+    //public float lerpSpeed = 0.05f;
+
     void Start()
     {
         //spriteRenderer = this.GetComponent<SpriteRenderer>();
         //addPhysics2DRaycast();
+
+        //brewTimerSlider.maxValue = brewTimer;
+        //brewTimerSlider.value = brewTimer;
+        //StartTimer();
     }
 
     //void addPhysics2DRaycast()
@@ -61,7 +79,67 @@ public class Controller : MonoBehaviour //, IPointerDownHandler , IBeginDragHand
                 CheckRecipe();
             }
         }
+        brewTimerSlider.maxValue = maxbrewTimer;
+        brewTimerSlider.value = brewTimer;
+        brewTimertext.text = $"{ brewTimer} :Sec";
+
+        //Debug.Log("brewTimer : " + brewTimerSlider.value);
+        //Debug.Log("maxbrewTimer " + maxbrewTimer);
+        if (brewTimer >= maxbrewTimer)
+        {
+            Debug.Log("Call Check");
+            StopTimer();
+            resultSlot.gameObject.SetActive(true);
+            ClearCraftingSlot();
+        }
     }
+
+    public void StartTimer()
+    {
+        StartBrewTime();
+        StartCoroutine(StartTimeTicker());
+    }
+
+    IEnumerator StartTimeTicker()
+    {
+        while (stopTimer == false)
+        {
+            brewTimer += Time.deltaTime;
+            yield return new WaitForSeconds(0.001f);
+
+            if (brewTimer == maxbrewTimer)
+            {
+                stopTimer = true;
+            }
+
+            if (stopTimer == false)
+            {
+                brewTimerSlider.value = brewTimer;
+            }
+        }
+
+
+    }
+
+    public void StopTimer()
+    {
+        startBrewtime = false;
+        stopTimer = true;
+        brewTimerSlider.value = 0f;
+        brewTimer = 0f;
+    }
+
+    public void StartBrewTime()
+    {
+        startBrewtime = true;
+        stopTimer = false;
+
+    }
+
+    //public void //Awake()
+    //{
+    //    brewTimertext.text = $"{ brewTimer} Sec.";
+    //}
 
     void CheckRecipe()
     {
@@ -74,23 +152,46 @@ public class Controller : MonoBehaviour //, IPointerDownHandler , IBeginDragHand
             if (materials != null)
             {
                 currentRecipeString += materials.materialType;
+                Debug.Log("Start Brew");
+                StartTimer();
             }
+            
+            //if (materials.materialType != null)
+            //{
+            //    Debug.Log("Start Brew");
+            //}
+
             else
             {
                 currentRecipeString += "null";
+                Debug.Log("Stop Brew");
+                StopTimer();
             }
         }
+            
 
         for (int i=0; i<recipe.Length; i++)
         {
-            if(recipe[i] == currentRecipeString)
+            Debug.Log("Active Forloop");
+            //resultSlot.GetComponent<Image>().sprite = recipeResult[i].GetComponent<Image>().sprite;
+
+            if (recipe[i] == currentRecipeString) 
             {
-                resultSlot.gameObject.SetActive(true);
+                Debug.Log("Create Potion");
+                //StopTimer();
+                //yield return new WaitForSeconds(brewTimer = maxbrewTimer); 
+                //resultSlot.gameObject.SetActive(true);
                 resultSlot.GetComponent<Image>().sprite = recipeResult[i].GetComponent<Image>().sprite;
                 resultSlot.material = recipeResult[i];
+
+                
+
+                //Instantiate(potionPrefab, new Vector2(), Quaternion.identity);
+
             }
         }
     }
+
 
     public void OnClickSlot(Slot slot)
     {
@@ -116,15 +217,20 @@ public class Controller : MonoBehaviour //, IPointerDownHandler , IBeginDragHand
         if (currentMaterial == null)
         {
             Debug.Log("clicked");
+            //var currentMaterial = new currentPotion;
             pointer.gameObject.SetActive(true);
             pointer.sprite = slot.material.GetComponent<Image>().sprite;
+            
+
             slot.gameObject.SetActive(false);
-            ClearCraftingSlot();
+            
+            //ClearCraftingSlot();
         }
     }
 
     public void ClearCraftingSlot()
     {
+        Debug.Log("Clear ResultSlot");
         foreach (Slot slot in craftingSlot)
         {
             slot.material = null;
