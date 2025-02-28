@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
-public class Controller : MonoBehaviour //, IPointerDownHandler , IBeginDragHandler , IDragHandler , IEndDragHandler
+public class Controller : MonoBehaviour//, IPointerDownHandler , IBeginDragHandler 
 {
     private SpriteRenderer spriteRenderer;
     private Materials currentMaterial;
@@ -32,22 +32,13 @@ public class Controller : MonoBehaviour //, IPointerDownHandler , IBeginDragHand
 
     void Start()
     {
-        //spriteRenderer = this.GetComponent<SpriteRenderer>();
-        //addPhysics2DRaycast();
 
         //brewTimerSlider.maxValue = brewTimer;
         //brewTimerSlider.value = brewTimer;
         //StartTimer();
     }
 
-    //void addPhysics2DRaycast()
-    //{
-    //    Physics2DRaycaster physicsRaycaster = GameObject.FindObjectOfType<Physics2DRaycaster>();
-    //    if (physicsRaycaster == null)
-    //    {
-    //        Camera.main.gameObject.AddComponent<Physics2DRaycaster>();
-    //    }
-    //}
+
 
     private void Update()
     {
@@ -81,7 +72,7 @@ public class Controller : MonoBehaviour //, IPointerDownHandler , IBeginDragHand
         }
         brewTimerSlider.maxValue = maxbrewTimer;
         brewTimerSlider.value = brewTimer;
-        brewTimertext.text = $"{ brewTimer} :Sec";
+        brewTimertext.text = $"{ brewTimer} Sec";
 
         //Debug.Log("brewTimer : " + brewTimerSlider.value);
         //Debug.Log("maxbrewTimer " + maxbrewTimer);
@@ -149,24 +140,26 @@ public class Controller : MonoBehaviour //, IPointerDownHandler , IBeginDragHand
         string currentRecipeString = "";
         foreach(Materials materials in materiallist)
         {
+            Debug.Log("Meterial in slot :" + materiallist);
+            Debug.Log("currentRecipeString :" + currentRecipeString);
+
             if (materials != null)
             {
                 currentRecipeString += materials.materialType;
                 Debug.Log("Start Brew");
                 StartTimer();
+                
             }
-            
-            //if (materials.materialType != null)
-            //{
-            //    Debug.Log("Start Brew");
-            //}
+
 
             else
             {
+
                 currentRecipeString += "null";
                 Debug.Log("Stop Brew");
                 StopTimer();
             }
+
         }
             
 
@@ -178,9 +171,7 @@ public class Controller : MonoBehaviour //, IPointerDownHandler , IBeginDragHand
             if (recipe[i] == currentRecipeString) 
             {
                 Debug.Log("Create Potion");
-                //StopTimer();
-                //yield return new WaitForSeconds(brewTimer = maxbrewTimer); 
-                //resultSlot.gameObject.SetActive(true);
+
                 resultSlot.GetComponent<Image>().sprite = recipeResult[i].GetComponent<Image>().sprite;
                 resultSlot.material = recipeResult[i];
 
@@ -239,15 +230,5 @@ public class Controller : MonoBehaviour //, IPointerDownHandler , IBeginDragHand
         }
     }
 
-    //public void OnDrag(PointerEventData eventData)
-    //{
-    //    Debug.Log("OnDrag: ");
-    //    //transform.position = new Vector3 (Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
-    //    //Camera.main.ScreenToWorldPoint(Input.mousePosition).y,0);
-    //}
 
-    //public void OnEndDrag(PointerEventData eventData)
-    //{
-    //    Debug.Log("End: ");
-    //}
 }
