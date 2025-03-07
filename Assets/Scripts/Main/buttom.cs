@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class buttomongame1 : MonoBehaviour
+public class buttom : MonoBehaviour
 {
     [SerializeField] AudioSource clickSFX;
-    public void Button()
+    public void Buttom()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Menu");
     }
-    public void back()
+    public void Quit()
     {
-        SceneManager.LoadScene("Main");
+        Application.Quit();
     }
-
 }
