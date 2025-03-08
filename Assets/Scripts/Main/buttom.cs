@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class buttom : MonoBehaviour
 {
+
     [SerializeField] AudioSource clickSFX;
     public void Buttom()
     {
@@ -13,4 +14,5 @@ public class buttom : MonoBehaviour
     {
         Application.Quit();
     }
+    
 }
