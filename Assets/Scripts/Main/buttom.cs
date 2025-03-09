@@ -14,7 +14,7 @@ public class buttom : MonoBehaviour
     }
     public void Setting()
     {
-        StartCoroutine(DelayBeforeLoadScene("Setting"));
+        clickSFX.Play();
     }
     public void Quits()
     {
