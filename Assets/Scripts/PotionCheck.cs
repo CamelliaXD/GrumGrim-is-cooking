@@ -49,34 +49,34 @@ public class PotionCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonUp(0))
-        {
-            if (currentPotion != null)
-            {
-                pointer.gameObject.SetActive(false);
-                Slot nearestSlot = null;
-                float shortestDistance = float.MaxValue;
+        //if (Input.GetMouseButtonUp(0))
+        //{
+        //    if (currentPotion != null)
+        //    {
+        //        pointer.gameObject.SetActive(false);
+        //        Slot nearestSlot = null;
+        //        float shortestDistance = float.MaxValue;
 
-                foreach (Slot slot in dropPotionSlot)
-                {
-                    float dist = Vector2.Distance(Input.mousePosition, slot.transform.position);
+        //        foreach (Slot slot in dropPotionSlot)
+        //        {
+        //            float dist = Vector2.Distance(Input.mousePosition, slot.transform.position);
 
-                    if (dist < shortestDistance)
-                    {
-                        shortestDistance = dist;
-                        nearestSlot = slot;
-                    }
-                }
+        //            if (dist < shortestDistance)
+        //            {
+        //                shortestDistance = dist;
+        //                nearestSlot = slot;
+        //            }
+        //        }
 
-                nearestSlot.gameObject.SetActive(true);
-                nearestSlot.GetComponent<Image>().sprite = currentPotion.GetComponent<Image>().sprite;
-                nearestSlot.material = currentPotion;
+        //        nearestSlot.gameObject.SetActive(true);
+        //        nearestSlot.GetComponent<Image>().sprite = currentPotion.GetComponent<Image>().sprite;
+        //        nearestSlot.material = currentPotion;
 
-                potionlist[nearestSlot.index] = currentPotion;
-                currentPotion = null;
-                CheckPotion();
-            }
-        }
+        //        potionlist[nearestSlot.index] = currentPotion;
+        //        currentPotion = null;
+        //        CheckPotion();
+        //    }
+        //}
     }
 
     void CheckPotion()
