@@ -8,7 +8,7 @@ public class buttomongame1 : MonoBehaviour
     [SerializeField] AudioSource clickSFX;
     public void Button()
     {
-        StartCoroutine(DelayBeforeLoadScene("SampleScene"));
+        StartCoroutine(DelayBeforeLoadScene("DialogueTest"));
     }
     public void back()
     {

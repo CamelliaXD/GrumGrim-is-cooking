@@ -20,6 +20,10 @@ public class buttom : MonoBehaviour
     {
         Application.Quit();
     }
+    public void Play()
+    {
+        StartCoroutine(DelayBeforeLoadScene("SampleScene"));
+    }
 
     IEnumerator DelayBeforeLoadScene(string sceneName)
     {

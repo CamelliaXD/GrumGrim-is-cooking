@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 namespace DialogueSystem
 {
     public class DialogueHolder : MonoBehaviour
@@ -27,6 +28,12 @@ namespace DialogueSystem
             {
                 transform.GetChild(i).gameObject.SetActive(false);
             }
+        }
+
+        public void Play()
+        {
+            Debug.Log("Loading Scene: SampleScene");
+            SceneManager.LoadScene("SampleScene");
         }
     }
 }
