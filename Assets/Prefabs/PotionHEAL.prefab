@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6504921346938861312}
   - component: {fileID: 1718505324644155743}
   - component: {fileID: -7637203198658854698}
+  - component: {fileID: 1172939842}
   m_Layer: 5
   m_Name: PotionHEAL
   m_TagString: Untagged
@@ -67,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8f44c9e576efdb841bd2bace7fecfbd5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7541a46bcff53374f9cc31e6b45a7285, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,3 +91,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materialType: P_Heal
+--- !u!114 &1172939842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6599344716834990770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PotionCheck, Assembly-CSharp
+          m_MethodName: OnPointerDown
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: -7637203198658854698}
+            m_ObjectArgumentAssemblyTypeName: Materials, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
