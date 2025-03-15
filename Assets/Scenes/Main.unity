@@ -2181,7 +2181,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 717117527}
         m_TargetAssemblyTypeName: buttom, Assembly-CSharp
-        m_MethodName: Quit
+        m_MethodName: Quits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
