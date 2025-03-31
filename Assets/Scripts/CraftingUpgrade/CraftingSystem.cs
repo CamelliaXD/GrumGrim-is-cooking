@@ -10,4 +10,9 @@ public class CraftingSystem : MonoBehaviour
         
     }
 
+    private void CreateItemResult(BrewItem item)
+    {
+        //Transform itemTransform = Instantiate()
+    }
+
 }

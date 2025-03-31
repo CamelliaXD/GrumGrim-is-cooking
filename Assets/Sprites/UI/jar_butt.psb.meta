@@ -104,7 +104,7 @@ ScriptedImporter:
       y: 4
       width: 187
       height: 84
-    spriteID: c5bbf5d1eb67ce041ad67fa8a61d3704
+    spriteID: 98e17d93d2ba29b4e8eee6cda72dff4e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -151,7 +151,7 @@ ScriptedImporter:
     spriteName: Layer1
     isGroup: 0
     parentIndex: -1
-    spriteID: c5bbf5d1eb67ce041ad67fa8a61d3704
+    spriteID: 98e17d93d2ba29b4e8eee6cda72dff4e
     layerID: 3
     mosaicPosition: {x: 4, y: 4}
     flatten: 0

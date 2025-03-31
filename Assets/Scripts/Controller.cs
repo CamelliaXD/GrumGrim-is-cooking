@@ -7,11 +7,13 @@ using TMPro;
 
 public class Controller : MonoBehaviour//, IPointerDownHandler , IBeginDragHandler 
 {
-    //public static Controller instance;
+    public static Controller instance;
 
     private SpriteRenderer spriteRenderer;
     private Materials currentMaterial;
     public Image pointer;
+
+    //private BrewItem item;
 
     [SerializeField] private GameObject potionPrefab;
 
