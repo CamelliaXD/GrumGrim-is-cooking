@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 405110625228624255}
   - component: {fileID: 7767164811990375044}
   - component: {fileID: -2581673924476756428}
+  - component: {fileID: 480382904}
   m_Layer: 5
   m_Name: PotionDEF
   m_TagString: Untagged
@@ -67,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5c2e9456d095e4b46b51e5d15e25929b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4b2a0ca03e2e2b34ab731d3bd9ac7ca5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,3 +91,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materialType: P_Def
+--- !u!114 &480382904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8102829718977330431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PotionCheck, Assembly-CSharp
+          m_MethodName: OnPointerDown
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: -2581673924476756428}
+            m_ObjectArgumentAssemblyTypeName: Materials, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

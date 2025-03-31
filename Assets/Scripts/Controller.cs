@@ -13,6 +13,8 @@ public class Controller : MonoBehaviour//, IPointerDownHandler , IBeginDragHandl
     private Materials currentMaterial;
     public Image pointer;
 
+    //private BrewItem item;
+
     [SerializeField] private GameObject potionPrefab;
 
     public Slot[] craftingSlot;
