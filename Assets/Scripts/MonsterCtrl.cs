@@ -13,13 +13,13 @@ public class MonsterCtrl : MonoBehaviour, IPointerDownHandler, IDragHandler, IEn
     private Collider2D col;
     private Vector3 formerPosition;
 
-    public Slider countdownSlider;
-    public float maxTimer = 0.10f;
-    public float coutingTime;
-    public bool stopCount = false;
-    public bool startCountTime = false;
+    //public Slider countdownSlider;
+    //public float maxTimer = 0.10f;
+    //public float coutingTime;
+    //public bool stopCount = false;
+    //public bool startCountTime = false;
 
-    public TMP_Text countdowntext;
+    //public TMP_Text countdowntext;
 
 
 
@@ -78,9 +78,9 @@ public class MonsterCtrl : MonoBehaviour, IPointerDownHandler, IDragHandler, IEn
 
     }
 
-    public void StartCountdown()
-    {
-        Debug.Log("StartCountdown");
-        //coutingTime -= Time.deltaTime;
-    }
+    //public void StartCountdown()
+    //{
+    //    Debug.Log("StartCountdown");
+    //    //coutingTime -= Time.deltaTime;
+    //}
 }

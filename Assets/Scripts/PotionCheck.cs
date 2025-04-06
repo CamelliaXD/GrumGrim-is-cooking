@@ -10,7 +10,7 @@ public class PotionCheck : MonoBehaviour
     public static PotionCheck potionCheck;
 
     private SpriteRenderer spriteRenderer;
-    private Materials currentPotion;
+    /*private*/ public Materials currentPotion;
     public Image pointer;
 
     //public Materials[] craftingPotion;
