@@ -5,7 +5,7 @@ using UnityEngine;
 public interface IHealDropZone
 {
 
-    void OnMonsDroptoZone(MonsterCtrl monsterCtrl);
+    void OnMonsDroptoZone(MonsterCtrl monsterCtrl, Canvas statPanel);
 
 
 }
