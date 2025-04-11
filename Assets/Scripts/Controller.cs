@@ -31,6 +31,11 @@ public class Controller : MonoBehaviour//, IPointerDownHandler , IBeginDragHandl
 
     public TMP_Text brewTimertext;
 
+    //result
+    public GameObject[] potionForResult;
+    public GameObject spawnPotion;
+
+
     //public bool shouldLerp = false;
     //public float lerpSpeed = 0.05f;
 
@@ -82,7 +87,7 @@ public class Controller : MonoBehaviour//, IPointerDownHandler , IBeginDragHandl
         //Debug.Log("maxbrewTimer " + maxbrewTimer);
         if (brewTimer >= maxbrewTimer)
         {
-            Debug.Log("Call Check");
+            //Debug.Log("Call Check");
             StopTimer();
             resultSlot.gameObject.SetActive(true);
             ClearCraftingSlot();
@@ -169,17 +174,17 @@ public class Controller : MonoBehaviour//, IPointerDownHandler , IBeginDragHandl
 
         for (int i=0; i<recipe.Length; i++)
         {
-            Debug.Log("Active Forloop");
+            //Debug.Log("Active Forloop");
             //resultSlot.GetComponent<Image>().sprite = recipeResult[i].GetComponent<Image>().sprite;
 
             if (recipe[i] == currentRecipeString) 
             {
-                Debug.Log("Create Potion");
+                //Debug.Log("Create Potion");
 
                 resultSlot.GetComponent<Image>().sprite = recipeResult[i].GetComponent<Image>().sprite;
                 resultSlot.material = recipeResult[i];
 
-                
+                //newMonInZone.transform.SetParent(monZone.transform, false);
 
                 //Instantiate(potionPrefab, new Vector2(), Quaternion.identity);
 
@@ -215,10 +220,10 @@ public class Controller : MonoBehaviour//, IPointerDownHandler , IBeginDragHandl
             //var currentMaterial = new currentPotion;
             pointer.gameObject.SetActive(true);
             pointer.sprite = slot.material.GetComponent<Image>().sprite;
-            
+
 
             slot.gameObject.SetActive(false);
-            
+
             //ClearCraftingSlot();
         }
     }

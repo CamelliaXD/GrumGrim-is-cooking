@@ -1046,7 +1046,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1076,6 +1076,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monMaxHp: 30
   monHp_Slider: {fileID: 6213648993956634026}
+  stopCount: 0
+  deadSprite: {fileID: 0}
+  canCheckIn: 1
   countTimer: 0
   speed: 2
   statPanel: {fileID: 1771540103420844428}
@@ -1202,7 +1205,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &8434141297801346976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1227,6 +1230,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6213648993650560733}
     m_Modifications:
+    - target: {fileID: -2434253158774345512, guid: 85f3e50b6ad164944a4723ee354d7642, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2434253158774345512, guid: 85f3e50b6ad164944a4723ee354d7642, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 301826588347354635, guid: 85f3e50b6ad164944a4723ee354d7642, type: 3}
       propertyPath: m_SortingLayer
       value: 0

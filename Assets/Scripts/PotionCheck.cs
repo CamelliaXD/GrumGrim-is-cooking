@@ -12,6 +12,7 @@ public class PotionCheck : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     /*private*/ public Materials currentPotion;
     public Image pointer;
+    private Collider2D col;
 
     //public Materials[] craftingPotion;
     //public Sprite[] monsterSprite;
@@ -38,6 +39,7 @@ public class PotionCheck : MonoBehaviour
         var randomNum = Random.Range(0, 2);
         conditionSlot[0].GetComponent<Image>().sprite = craftingPotion[randomNum].GetComponent<Image>().sprite;
         conditionSlot[0].gameObject.SetActive(true);
+        craftingPotion[randomNum] = currentPotion;
     }
 
 
@@ -84,25 +86,49 @@ public class PotionCheck : MonoBehaviour
         Debug.Log("CheckPotion");
     }
 
-    //void PotionRandomButton()
-    //{
-    //    RandomCondition();
-    //}
-
-
     public void OnPointerDown(Materials materials)
     {
 
-        if (currentPotion == null)
-        {
-            currentPotion = materials;
-            pointer.gameObject.SetActive(true);
-            pointer.sprite = currentPotion.GetComponent<Image>().sprite;
-        }
+        //if (currentPotion == null)
+        //{
+        //    currentPotion = materials;
+        //    pointer.gameObject.SetActive(true);
+        //    pointer.sprite = currentPotion.GetComponent<Image>().sprite;
+        //}
+
+        //col.enabled = false;
+        //Collider2D hitCollider = Physics2D.OverlapPoint(transform.position);
+        //col.enabled = true;
+        //if (hitCollider != null && hitCollider.TryGetComponent(out Pointer pointer))
+        //{
+            
+        //}
+
         //Debug.Log("PotionDrop");
         //slot.material = null;
         //potionlist[slot.index] = null;
         //slot.gameObject.SetActive(false);
         //CheckPotion();
+
+
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Debug.Log("Potion collision");
+        ////pointer.sprite = pointer.GetComponent<Image>().sprite;
+        //pointer.sprite = pointer.GetComponent<Image>().sprite;
+        //if (pointer.sprite != null)
+        //{
+        //    if (currentPotion.GetComponent<Image>().sprite.name == pointer.GetComponent<Image>().sprite.name)
+        //    {
+        //        Debug.Log("Potioncheck");
+        //    }
+
+        //    else
+        //    {
+        //        Debug.Log("Potion not match");
+        //    }
+        //}
     }
 }
