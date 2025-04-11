@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69a95cec5246604b8c703fe3530c189, type: 3}
   m_Name: BluePotionRecipe 1
   m_EditorClassIdentifier: 
-  output: {fileID: 11400000, guid: 5054a20d25235cb4ea711e9c354869e0, type: 2}
-  item_Left: {fileID: 11400000, guid: 3a1245ef1448be445bed0dba46007305, type: 2}
-  item_Right: {fileID: 11400000, guid: d3f7c4440b4f5774789e556e4c40dd9c, type: 2}
+  result: {fileID: 11400000, guid: 5054a20d25235cb4ea711e9c354869e0, type: 2}
+  item_00: {fileID: 11400000, guid: d3f7c4440b4f5774789e556e4c40dd9c, type: 2}
+  item_10: {fileID: 11400000, guid: 3a1245ef1448be445bed0dba46007305, type: 2}

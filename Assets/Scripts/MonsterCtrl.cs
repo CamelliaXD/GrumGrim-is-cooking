@@ -69,8 +69,7 @@ public class MonsterCtrl : MonoBehaviour, IPointerDownHandler, IDragHandler, IEn
     public void StopCount()
     {
         Debug.Log("died");
-        stopCount = true;
-        //DestroyImmediate(instance, gameObject  );
+        stopCount = true; 
         GameManager.curPlayerStm -= 1;
         Destroy(gameObject);
         

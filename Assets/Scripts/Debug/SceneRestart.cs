@@ -7,7 +7,7 @@ namespace Editor
 {
     public class SceneRestart
     {
-        [MenuItem("RestartScene/Restart Scene #R")]
+        //[MenuItem("RestartScene/Restart Scene #R")]
         private static void RestartScene()
         {
             var currentScene = SceneManager.GetActiveScene();
