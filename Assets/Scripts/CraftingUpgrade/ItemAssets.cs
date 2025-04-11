@@ -11,6 +11,7 @@ public class ItemAssets : MonoBehaviour
         Instance = this;
     }
 
+    public Transform ItemToCompare;
 
     public Sprite boneSprite;
     public Sprite herbSprite;

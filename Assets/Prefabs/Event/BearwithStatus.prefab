@@ -360,7 +360,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -390,6 +390,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monMaxHp: 30
   monHp_Slider: {fileID: 6317807075102401732}
+  stopCount: 0
+  deadSprite: {fileID: 0}
+  canCheckIn: 1
   countTimer: 0
   speed: 1.5
   statPanel: {fileID: 1802506995644768482}
@@ -1242,6 +1245,14 @@ PrefabInstance:
     - target: {fileID: 3100027278643366134, guid: bd2e4a2fc85575c499d3c100cadd1a47, type: 3}
       propertyPath: m_Bounds.m_Extent.y
       value: 8.338362
+      objectReference: {fileID: 0}
+    - target: {fileID: 5219540410786157426, guid: bd2e4a2fc85575c499d3c100cadd1a47, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5219540410786157426, guid: bd2e4a2fc85575c499d3c100cadd1a47, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5370859865344084625, guid: bd2e4a2fc85575c499d3c100cadd1a47, type: 3}
       propertyPath: m_SortingLayer

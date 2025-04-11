@@ -54,7 +54,8 @@ public class MonsterCtrl : MonoBehaviour, IPointerDownHandler, IDragHandler, IEn
             if (monMaxHp <= 0)
             {
                 stopCount = true;
-                
+                StopCount();
+
                 //Debug.Log("monster" + this.name +"died");
             }
             if (stopCount == false)
@@ -68,8 +69,10 @@ public class MonsterCtrl : MonoBehaviour, IPointerDownHandler, IDragHandler, IEn
     public void StopCount()
     {
         Debug.Log("died");
-        stopCount = true;
+        stopCount = true; 
+        GameManager.curPlayerStm -= 1;
         Destroy(gameObject);
+        
     }
 
     void addPhysics2DRaycast()

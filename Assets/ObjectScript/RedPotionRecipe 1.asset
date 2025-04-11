@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69a95cec5246604b8c703fe3530c189, type: 3}
   m_Name: RedPotionRecipe 1
   m_EditorClassIdentifier: 
-  output: {fileID: 11400000, guid: ff7e4904c7145fd40a5d7ecce5f0b2e6, type: 2}
-  item_Left: {fileID: 11400000, guid: d3f7c4440b4f5774789e556e4c40dd9c, type: 2}
-  item_Right: {fileID: 11400000, guid: a15401861f4f51941ad4e3695b1ae2b0, type: 2}
+  result: {fileID: 11400000, guid: ff7e4904c7145fd40a5d7ecce5f0b2e6, type: 2}
+  item_00: {fileID: 11400000, guid: a15401861f4f51941ad4e3695b1ae2b0, type: 2}
+  item_10: {fileID: 11400000, guid: d3f7c4440b4f5774789e556e4c40dd9c, type: 2}

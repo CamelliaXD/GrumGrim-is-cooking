@@ -20,17 +20,34 @@ public class BrewItem
     }
 
     public ItemObjectScript itemObjectScript;
-    //private IItemHolder = itemHolder;
+    private IitemHolder itemHolder;
 
-    //public void SetItemHolder(IItemHolder itemHolder)
-    //{
-    //    this.ItemHolder = itemHolder;
-    //}
+    public void SetItemHolder(IitemHolder itemHolder)
+    {
+        this.itemHolder = itemHolder;
+    }
 
-    //public IItemHolder GetItemHolder()
-    //{
-    //    return itemHolder();
-    //}
+    public IitemHolder GetItemHolder()
+    {
+        return itemHolder;
+    }
+
+    public void RemoveFromItemHolder()
+    {
+        if (itemHolder != null)
+        {
+            // Remove from current Item Holder
+            itemHolder.RemoveItem(this);
+        }
+    }
+
+    public void MoveToAnotherItemHolder(IitemHolder newItemHolder)
+    {
+        RemoveFromItemHolder();
+        // Add to new Item Holder
+        newItemHolder.AddItem(this);
+    }
+
 
     public Sprite GetSprite()
     {
@@ -49,13 +66,20 @@ public class BrewItem
             case ItemType.RedPotion: return ItemAssets.Instance.redPotionSprite;
             case ItemType.GreenPotion: return ItemAssets.Instance.greenPotionSprite;
             case ItemType.BluePotion: return ItemAssets.Instance.bluePotionSprite;
-        }
+        }                    
     }
 
     public override string ToString()
     {
-        return itemObjectScript.itemName;  //itemType.ToString();
+        return itemObjectScript.itemName;  
     }
+
+
+    //just in case
+    //public Color GetColor()
+    //{
+    //    return Color.white;// GetColor(itemType);
+    //}
 
 
 

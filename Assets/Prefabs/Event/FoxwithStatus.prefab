@@ -754,7 +754,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -784,6 +784,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monMaxHp: 30
   monHp_Slider: {fileID: 9016464193580732136}
+  stopCount: 0
+  deadSprite: {fileID: 0}
+  canCheckIn: 1
   countTimer: 0
   speed: 2.5
   statPanel: {fileID: 3715044085314423502}
